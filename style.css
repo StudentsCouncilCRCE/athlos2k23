@@ -3537,3 +3537,41 @@ input[type="search"]::-webkit-search-results-decoration {
 .\[\&\>div\]\:bg-slate-700\/20>div{
   background-color: rgb(51 65 85 / 0.2);
 }
+
+
+
+/* stuco edition */
+
+.h-69{
+  height: 12rem;
+}
+
+.input-color{
+  background-color: #1e283d;
+  border: 0;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .lg\:hidden {
+      display: none !important;
+  }
+  .lol{
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  #mobile-menu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+  }
+
+  #mobile-menu.hidden {
+      display: none;
+  }
+}

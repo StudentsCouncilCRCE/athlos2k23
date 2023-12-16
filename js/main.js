@@ -50,7 +50,7 @@ if (carouselEl.length > 0) {
 
 // Particle animation
 class ParticleAnimation {
-  constructor(el, { quantity = 30, staticity = 50, ease = 50 } = {}) {
+  constructor(el, { quantity = 180, staticity = 10, ease = 10 } = {}) {
     this.canvas = el;
     if (!this.canvas) return;
     this.canvasContainer = this.canvas.parentElement;
@@ -130,14 +130,31 @@ class ParticleAnimation {
     return { x, y, translateX, translateY, size, alpha, targetAlpha, dx, dy, magnetism };
   }
 
+  // drawCircle(circle, update = false) {
+  //   const { x, y, translateX, translateY, size, alpha } = circle;
+  //   this.context.translate(translateX, translateY);
+  //   this.context.beginPath();
+  //   this.context.arc(x, y, size, 0, 2 * Math.PI);
+  //   this.context.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+  //   this.context.fill();
+  //   this.context.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+  //   if (!update) {
+  //     this.circles.push(circle);
+  //   }
+  // }
+
   drawCircle(circle, update = false) {
     const { x, y, translateX, translateY, size, alpha } = circle;
+  
+    // Load football image
+    const footballImage = new Image();
+    footballImage.src = '/images/football.png';
+  
     this.context.translate(translateX, translateY);
-    this.context.beginPath();
-    this.context.arc(x, y, size, 0, 2 * Math.PI);
-    this.context.fillStyle = `rgba(255, 255, 255, ${alpha})`;
-    this.context.fill();
+    this.context.globalAlpha = alpha;
+    this.context.drawImage(footballImage, x - size, y - size, size * 10, size * 10);
     this.context.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+  
     if (!update) {
       this.circles.push(circle);
     }
