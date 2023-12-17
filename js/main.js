@@ -50,7 +50,7 @@ if (carouselEl.length > 0) {
 
 // Particle animation
 class ParticleAnimation {
-  constructor(el, { quantity = 180, staticity = 10, ease = 10 } = {}) {
+  constructor(el, { quantity = 180, staticity = 5, ease = 2   } = {}) {
     this.canvas = el;
     if (!this.canvas) return;
     this.canvasContainer = this.canvas.parentElement;

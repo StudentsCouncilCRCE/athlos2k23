@@ -21,13 +21,24 @@
         <!-- Site header -->
         <header class="absolute w-full z-30">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="flex items-center justify-between h-16 md:h-20">
-
-                    <div class="shrink-0 mr-4">
+                <div class="flex items-center justify-between h-16 md:h-20 pt-4">
+                    <style>
+                        /* Add this style to your CSS or in a style tag in your HTML */
+                        .logo-container {
+                          transition: transform 0.3s ease-in-out;
+                        }
+                      
+                        .logo-container:hover {
+                          transform: scale(1.1);
+                        }
+                      </style>
+                      
+                      <div class="shrink-0 mr-4 logo-container">
                         <a class="block" href="index.html" aria-label="StuCo">
-                            <img src="./images/stuco-logo.png" width="38" height="38" alt="Athlos">
+                          <img src="./images/stuco-logo.png" width="75" height="75" alt="Athlos">
                         </a>
-                    </div>
+                      </div>
+                      
 
                     <div class="lg:hidden">
                         <button id="mobile-menu-button"
@@ -40,35 +51,74 @@
                         </button>
                     </div>
 
-                    <nav class="flex-grow hidden lg:flex lg:items-center lg:w-auto hidden" id="mobile-menu">
-
+                    <style>
+                        /* Add this style to your CSS or in a style tag in your HTML */
+                        nav ul li {
+                          position: relative;
+                        }
+                      
+                        nav ul li::after {
+                          content: '';
+                          position: absolute;
+                          width: 0;
+                          height: 2px;
+                          bottom: 0;
+                          left: 50%;
+                          background-color: white;
+                          transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+                        }
+                      
+                        nav ul li:hover::after {
+                          width: 100%;
+                          left: 0;
+                        }
+                      </style>
+                      
+                      <nav class="flex-grow hidden lg:flex lg:items-center lg:w-auto hidden" id="mobile-menu">
                         <ul class="flex-grow justify-end flex-wrap items-center lol">
-                            <li class="ml-6">
-                                <a class="font-medium text-sm text-slate-300 hover:text-white transition duration-150 ease-in-out"
-                                    href="#hero">Home</a>
-                            </li>
-                            <li class="ml-6">
-                                <a class="font-medium text-sm text-slate-300 hover:text-white transition duration-150 ease-in-out"
-                                    href="#schedule">Schedule</a>
-                            </li>
-                            <li class="ml-6">
-                                <a class="font-medium text-sm text-slate-300 hover:text-white transition duration-150 ease-in-out"
-                                    href="#events">Events</a>
-                            </li>
-                            <li class="ml-6">
-                                <a class="font-medium text-sm text-slate-300 hover:text-white transition duration-150 ease-in-out"
-                                    href="#contact">Contact</a>
-                            </li>
-                            <div class="ml-6">
-                                <a class="btn text-slate-900 bg-gradient-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group"
-                                    href="#0">
-                                    Brochure <span
-                                        class="tracking-normal text-amber-500 group-hover:translate-y-0.5 transition-transform duration-150 ease-in-out ml-1"><i class="ml-2 fa-solid fa-arrow-down" style="color: #C95106;"></i></span>
-                                </a>
-                            </div>
+                          <li class="ml-6">
+                            <a class="font-medium text-lg text-slate-300 hover:text-white transition duration-150 ease-in-out"
+                              href="#hero">Home</a>
+                          </li>
+                          <li class="ml-6">
+                            <a class="font-medium text-lg text-slate-300 hover:text-white transition duration-150 ease-in-out"
+                              href="#schedule">Schedule</a>
+                          </li>
+                          <li class="ml-6">
+                            <a class="font-medium text-lg text-slate-300 hover:text-white transition duration-150 ease-in-out"
+                              href="#events">Events</a>
+                          </li>
+                          <li class="ml-6">
+                            <a class="font-medium text-lg text-slate-300 hover:text-white transition duration-150 ease-in-out"
+                              href="#contact">Contact</a>
+                          </li>
+                          <div class="ml-6">
+                            <style>
+                                /* Add this style to your CSS or in a style tag in your HTML */
+                                .btn {
+                                  /* Add your existing styles here */
+                                  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                                }
+                              
+                                .btn:hover {
+                                  transform: scale(1.1);
+                                }
+                              
+                                .btn:focus {
+                                  box-shadow: 0 0 10px rgba(201, 81, 6, 0.7); /* Use a suitable color of your choice */
+                                }
+                              </style>
+                              
+                              <a class="btn text-slate-900 bg-gradient-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group"
+                                href="#0">
+                                Brochure <span
+                                  class="tracking-normal text-amber-500 group-hover:translate-y-0.5 transition-transform duration-150 ease-in-out ml-1"><i
+                                    class="ml-2 fa-solid fa-arrow-down" style="color: #C95106;"></i></span>
+                              </a>                              
+                          </div>
                         </ul>
-
-                    </nav>
+                      </nav>
+                      
 
                 </div>
             </div>
@@ -159,7 +209,7 @@
                         <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
                             <div>
                                 <div
-                                    class="inline-flex font-medium bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-amber-200 pb-3">
+                                    class="inline-flex text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-amber-200 pb-3">
                                     Flow of events</div>
                             </div>
                             <h2
@@ -189,11 +239,11 @@
                                                 </div>
                                             </div>
                                             <div class="flex flex-col p-6 h-full">
-                                                <img class="mb-3" src="./images/carousel-icon-01.svg" width="56"
+                                                <img class="mb-3" src="./images/table-tennis-paddle-ball-solid.svg" width="56"
                                                     height="56" alt="Icon 01">
                                                 <div class="grow">
-                                                    <div class="font-bold text-lg mb-1">Chess</div>
-                                                    <div class="text-slate-400">11-12 February</div>
+                                                    <div class="font-bold text-lg mb-1">Table Tennis</div>
+                                                    <div class="text-slate-400">17th January</div>
                                                     <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West),
                                                         Mumbai</div>
                                                 </div>
@@ -226,7 +276,40 @@
                                                     height="56" alt="Icon 01">
                                                 <div class="grow">
                                                     <div class="font-bold text-lg mb-1">Chess</div>
-                                                    <div class="text-slate-400">11-12 February</div>
+                                                    <div class="text-slate-400">17th January</div>
+                                                    <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West),
+                                                        Mumbai</div>
+                                                </div>
+                                                <div class="text-right">
+                                                    <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group"
+                                                        href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span
+                                                            class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-amber-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:hover:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:_radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),theme(colors.amber.400),transparent)] after:group-hover:opacity-100 after:z-10 overflow-hidden group/slide">
+                                        <div
+                                            class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
+                                            <!-- Particles animation -->
+                                            <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out"
+                                                aria-hidden="true">
+                                                <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                                            </div>
+                                            <!-- Radial gradient -->
+                                            <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square"
+                                                aria-hidden="true">
+                                                <div
+                                                    class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col p-6 h-full">
+                                                <img class="mb-3" src="./images/carrom.svg" width="56"
+                                                    height="56" alt="Icon 01">
+                                                <div class="grow">
+                                                    <div class="font-bold text-lg mb-1">Carrom</div>
+                                                    <div class="text-slate-400">18th January</div>
                                                     <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West),
                                                         Mumbai</div>
                                                 </div>
@@ -258,8 +341,8 @@
                                                 <img class="mb-3" src="./images/carousel-icon-01.svg" width="56"
                                                     height="56" alt="Icon 01">
                                                 <div class="grow">
-                                                    <div class="font-bold text-lg mb-1">Chess</div>
-                                                    <div class="text-slate-400">11-12 February</div>
+                                                    <div class="font-bold text-lg mb-1">Box Cricket</div>
+                                                    <div class="text-slate-400">19-20th January</div>
                                                     <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West),
                                                         Mumbai</div>
                                                 </div>
@@ -271,6 +354,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                   
                                     <div
                                         class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-amber-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:hover:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:_radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),theme(colors.amber.400),transparent)] after:group-hover:opacity-100 after:z-10 overflow-hidden group/slide">
                                         <div
@@ -291,74 +375,8 @@
                                                 <img class="mb-3" src="./images/carousel-icon-01.svg" width="56"
                                                     height="56" alt="Icon 01">
                                                 <div class="grow">
-                                                    <div class="font-bold text-lg mb-1">Chess</div>
-                                                    <div class="text-slate-400">11-12 February</div>
-                                                    <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West),
-                                                        Mumbai</div>
-                                                </div>
-                                                <div class="text-right">
-                                                    <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group"
-                                                        href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span
-                                                            class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-amber-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:hover:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:_radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),theme(colors.amber.400),transparent)] after:group-hover:opacity-100 after:z-10 overflow-hidden group/slide">
-                                        <div
-                                            class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
-                                            <!-- Particles animation -->
-                                            <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out"
-                                                aria-hidden="true">
-                                                <canvas data-particle-animation data-particle-quantity="3"></canvas>
-                                            </div>
-                                            <!-- Radial gradient -->
-                                            <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square"
-                                                aria-hidden="true">
-                                                <div
-                                                    class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]">
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col p-6 h-full">
-                                                <img class="mb-3" src="./images/carousel-icon-01.svg" width="56"
-                                                    height="56" alt="Icon 01">
-                                                <div class="grow">
-                                                    <div class="font-bold text-lg mb-1">Chess</div>
-                                                    <div class="text-slate-400">11-12 February</div>
-                                                    <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West),
-                                                        Mumbai</div>
-                                                </div>
-                                                <div class="text-right">
-                                                    <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group"
-                                                        href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span
-                                                            class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-amber-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:hover:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:_radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),theme(colors.amber.400),transparent)] after:group-hover:opacity-100 after:z-10 overflow-hidden group/slide">
-                                        <div
-                                            class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
-                                            <!-- Particles animation -->
-                                            <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out"
-                                                aria-hidden="true">
-                                                <canvas data-particle-animation data-particle-quantity="3"></canvas>
-                                            </div>
-                                            <!-- Radial gradient -->
-                                            <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square"
-                                                aria-hidden="true">
-                                                <div
-                                                    class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]">
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col p-6 h-full">
-                                                <img class="mb-3" src="./images/carousel-icon-01.svg" width="56"
-                                                    height="56" alt="Icon 01">
-                                                <div class="grow">
-                                                    <div class="font-bold text-lg mb-1">Chess</div>
-                                                    <div class="text-slate-400">11-12 February</div>
+                                                    <div class="font-bold text-lg mb-1">Rink Football</div>
+                                                    <div class="text-slate-400">21st January</div>
                                                     <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West),
                                                         Mumbai</div>
                                                 </div>
@@ -437,6 +455,70 @@
                             <!-- Grid -->
                             <div class="grid md:grid-cols-12 place-items-center gap-6 group" data-highlighter>
                                 <!-- Box -->
+                                <div class="md:col-span-4 mb-4" data-aos="fade-down">
+                                    <div class="relative h-full bg-amber-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-amber-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:hover:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:_radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),theme(colors.amber.400),transparent)] after:group-hover:opacity-100 after:z-10 overflow-hidden">
+                                        <div class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
+                                            <div class="flex flex-col">
+                                                <!-- Radial gradient -->
+                                                <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square" aria-hidden="true">
+                                                    <div class="absolute inset-0 translate-z-0 bg-slate-800 rounded-full blur-[80px]"></div>
+                                                </div>
+                                                <!-- Text -->
+                                                <div class="md:max-w-[480px] order-1 md:order-none p-8 pt-0 md:p-8 my-1">
+                                                    <div>
+                                                        <h3 class="inline-flex text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-1">
+                                                            Table Tennis
+                                                        </h3>
+                                                        <a href="#">
+                                                            <p class="text-white-400">Serve it, spin it, smash it – table tennis, where every point is a masterpiece</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- Image -->
+                                                <div class="relative w-full h-64 md:h-auto overflow-hidden md:pb-8">
+                                                    <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0" src="./images/3.png" width="230" height="230" alt="Feature 03">
+                                                </div>
+                                                <!-- Registration Button -->
+                                                <a href="registration-page.html" class="absolute bottom-4 right-4 lg:bottom-8 lg:right-8 border border-white text-white px-4 py-2 rounded-md transition duration-300 hover:bg-white hover:text-black">
+                                                    Register Now
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>          
+                                <!-- Box -->
+                                <div class="md:col-span-4" data-aos="fade-down">
+                                    <div class="relative h-full bg-amber-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-amber-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:hover:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:_radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),theme(colors.amber.400),transparent)] after:group-hover:opacity-100 after:z-10 overflow-hidden">
+                                        <div class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
+                                            <div class="flex flex-col">
+                                                <!-- Radial gradient -->
+                                                <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square" aria-hidden="true">
+                                                    <div class="absolute inset-0 translate-z-0 bg-slate-800 rounded-full blur-[80px]"></div>
+                                                </div>
+                                                <!-- Text -->
+                                                <div class="md:max-w-[480px] order-1 md:order-none p-8 pt-0 md:p-8">
+                                                    <div>
+                                                        <h3 class="inline-flex text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-1">
+                                                            Chess
+                                                        </h3>
+                                                        <a href="#">
+                                                            <p class="text-white-400">Unleash your strategic prowess in the ultimate chess showdown.</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- Image -->
+                                                <div class="relative w-full h-64 md:h-auto overflow-hidden md:pb-8">
+                                                    <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0" src="./images/10.png" width="230" height="230" alt="Feature 03">
+                                                </div>
+                                                <!-- Registration Button -->
+                                                <a href="registration-page.html" class="absolute bottom-4 right-4 lg:bottom-8 lg:right-8 border border-white text-white px-4 py-2 rounded-md transition duration-300 hover:bg-white hover:text-black">
+                                                    Register Now
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                
+                                <!-- Box -->
                                 <div class="md:col-span-4" data-aos="fade-down">
                                     <div
                                         class="relative h-full bg-amber-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-amber-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:hover:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:_radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),theme(colors.amber.400),transparent)] after:group-hover:opacity-100 after:z-10 overflow-hidden">
@@ -455,19 +537,22 @@
                                                     <div>
                                                         <h3
                                                             class="inline-flex text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-1">
-                                                            Chess</h3>
+                                                            Carrom</h3>
                                                         <a href="">
-                                                            <p class="text-white-400">Unleash your strategic prowess in
-                                                                the ultimate chess showdown.</p>
+                                                            <p class="text-white-400">Slide and strike, pocket your victory – carrom, where precision meets passion</p>
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <!-- Image -->
                                                 <div class="relative w-full h-64 md:h-auto overflow-hidden md:pb-8">
                                                     <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0"
-                                                        src="./images/feature-image-03.png" width="230" height="230"
+                                                        src="./images/8.png" width="230" height="230"
                                                         alt="Feature 03">
                                                 </div>
+                                                <!-- Registration Button -->
+                                                <a href="registration-page.html" class="absolute bottom-4 right-4 lg:bottom-8 lg:right-8 border border-white text-white px-4 py-2 rounded-md transition duration-300 hover:bg-white hover:text-black">
+                                                    Register Now
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -491,19 +576,22 @@
                                                     <div>
                                                         <h3
                                                             class="inline-flex text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-1">
-                                                            Chess</h3>
+                                                            Box Cricket</h3>
                                                         <a href="">
-                                                            <p class="text-white-400">Unleash your strategic prowess in
-                                                                the ultimate chess showdown.</p>
+                                                            <p class="text-white-400">Bat for glory, bowl for victory – cricket, where every moment makes history."</p>
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <!-- Image -->
                                                 <div class="relative w-full h-64 md:h-auto overflow-hidden md:pb-8">
                                                     <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0"
-                                                        src="./images/feature-image-03.png" width="230" height="230"
+                                                        src="./images/6.png" width="230" height="230"
                                                         alt="Feature 03">
                                                 </div>
+                                                <!-- Registration Button -->
+                                                <a href="registration-page.html" class="absolute bottom-4 right-4 lg:bottom-8 lg:right-8 border border-white text-white px-4 py-2 rounded-md transition duration-300 hover:bg-white hover:text-black">
+                                                    Register Now
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -527,127 +615,22 @@
                                                     <div>
                                                         <h3
                                                             class="inline-flex text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-1">
-                                                            Chess</h3>
+                                                            Rink Football</h3>
                                                         <a href="">
-                                                            <p class="text-white-400">Unleash your strategic prowess in
-                                                                the ultimate chess showdown.</p>
+                                                            <p class="text-white-400">Kick off your limits, score your dreams – football, where legends are made.</p>
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <!-- Image -->
                                                 <div class="relative w-full h-64 md:h-auto overflow-hidden md:pb-8">
                                                     <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0"
-                                                        src="./images/feature-image-03.png" width="230" height="230"
+                                                        src="./images/Untitled design.png" width="230" height="230"
                                                         alt="Feature 03">
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Box -->
-                                <div class="md:col-span-4" data-aos="fade-down">
-                                    <div
-                                        class="relative h-full bg-amber-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-amber-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:hover:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:_radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),theme(colors.amber.400),transparent)] after:group-hover:opacity-100 after:z-10 overflow-hidden">
-                                        <div
-                                            class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
-                                            <div class="flex flex-col">
-                                                <!-- Radial gradient -->
-                                                <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
-                                                    aria-hidden="true">
-                                                    <div
-                                                        class="absolute inset-0 translate-z-0 bg-slate-800 rounded-full blur-[80px]">
-                                                    </div>
-                                                </div>
-                                                <!-- Text -->
-                                                <div class="md:max-w-[480px] order-1 md:order-none p-8 pt-0 md:p-8">
-                                                    <div>
-                                                        <h3
-                                                            class="inline-flex text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-1">
-                                                            Chess</h3>
-                                                        <a href="">
-                                                            <p class="text-white-400">Unleash your strategic prowess in
-                                                                the ultimate chess showdown.</p>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <!-- Image -->
-                                                <div class="relative w-full h-64 md:h-auto overflow-hidden md:pb-8">
-                                                    <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0"
-                                                        src="./images/feature-image-03.png" width="230" height="230"
-                                                        alt="Feature 03">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Box -->
-                                <div class="md:col-span-4" data-aos="fade-down">
-                                    <div
-                                        class="relative h-full bg-amber-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-amber-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:hover:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:_radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),theme(colors.amber.400),transparent)] after:group-hover:opacity-100 after:z-10 overflow-hidden">
-                                        <div
-                                            class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
-                                            <div class="flex flex-col">
-                                                <!-- Radial gradient -->
-                                                <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
-                                                    aria-hidden="true">
-                                                    <div
-                                                        class="absolute inset-0 translate-z-0 bg-slate-800 rounded-full blur-[80px]">
-                                                    </div>
-                                                </div>
-                                                <!-- Text -->
-                                                <div class="md:max-w-[480px] order-1 md:order-none p-8 pt-0 md:p-8">
-                                                    <div>
-                                                        <h3
-                                                            class="inline-flex text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-1">
-                                                            Chess</h3>
-                                                        <a href="">
-                                                            <p class="text-white-400">Unleash your strategic prowess in
-                                                                the ultimate chess showdown.</p>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <!-- Image -->
-                                                <div class="relative w-full h-64 md:h-auto overflow-hidden md:pb-8">
-                                                    <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0"
-                                                        src="./images/feature-image-03.png" width="230" height="230"
-                                                        alt="Feature 03">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Box -->
-                                <div class="md:col-span-4" data-aos="fade-down">
-                                    <div
-                                        class="relative h-full bg-amber-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-amber-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:hover:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:_radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),theme(colors.amber.400),transparent)] after:group-hover:opacity-100 after:z-10 overflow-hidden">
-                                        <div
-                                            class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
-                                            <div class="flex flex-col">
-                                                <!-- Radial gradient -->
-                                                <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
-                                                    aria-hidden="true">
-                                                    <div
-                                                        class="absolute inset-0 translate-z-0 bg-slate-800 rounded-full blur-[80px]">
-                                                    </div>
-                                                </div>
-                                                <!-- Text -->
-                                                <div class="md:max-w-[480px] order-1 md:order-none p-8 pt-0 md:p-8">
-                                                    <div>
-                                                        <h3
-                                                            class="inline-flex text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-1">
-                                                            Chess</h3>
-                                                        <a href="">
-                                                            <p class="text-white-400">Unleash your strategic prowess in
-                                                                the ultimate chess showdown.</p>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <!-- Image -->
-                                                <div class="relative w-full h-64 md:h-auto overflow-hidden md:pb-8">
-                                                    <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0"
-                                                        src="./images/feature-image-03.png" width="230" height="230"
-                                                        alt="Feature 03">
-                                                </div>
+                                                <!-- Registration Button -->
+                                                <a href="registration-page.html" class="absolute bottom-4 right-4 lg:bottom-8 lg:right-8 border border-white text-white px-4 py-2 rounded-md transition duration-300 hover:bg-white hover:text-black">
+                                                    Register Now
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -711,44 +694,44 @@
                                 </div>
                             </div>
                             <!-- Buttons -->
-                            <div class="flex flex-wrap justify-center -m-1.5">
-                                <!-- Alpine.js template for buttons: https://github.com/alpinejs/alpine#x-for -->
-                                <template x-for="(item, index) in items" :key="index">
-                                    <button
-                                        class="btn-sm m-1.5 text-xs py-1.5 text-slate-300 transition duration-150 ease-in-out [background:linear-gradient(theme(colors.amber.900),_theme(colors.amber.900))_padding-box,_conic-gradient(theme(colors.amber.400),_theme(colors.amber.700)_25%,_theme(colors.amber.700)_75%,_theme(colors.amber.400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-amber-800/30 before:rounded-full before:pointer-events-none"
-                                        :class="active === index ? 'opacity-100' : 'opacity-30 hover:opacity-60'"
-                                        @click="active = index; stopAutorotate();">
-                                        <span class="relative">
-                                            <span class="text-amber-50" x-text="item.name"></span> <span
-                                                class="text-amber-600">-</span> <span x-text="item.role"></span>
-                                        </span>
-                                    </button>
-                                </template>
-                            </div>
-                        </div>
+                            <!-- Buttons -->
+<div class="flex flex-wrap justify-center -m-1.5">
+    <!-- Alpine.js template for buttons: https://github.com/alpinejs/alpine#x-for -->
+    <template x-for="(item, index) in items" :key="index">
+        <button
+            class="btn-sm m-2 py-2 px-4 text-base font-semibold bg-black text-white hover:bg-gray-800 focus:outline-none focus:ring focus:border-amber-400 transition duration-150 ease-in-out relative before:absolute before:inset-0 before:bg-black/30 before:rounded-full before:pointer-events-none"
+            :class="active === index ? 'opacity-100' : 'opacity-30 hover:opacity-60'"
+            @click="active = index; stopAutorotate();">
+            <span class="relative">
+                <span x-text="item.name"></span> <span class="text-white">-</span> <span x-text="item.role"></span>
+            </span>
+        </button>
+    </template>
+</div>
+
                         <!-- Carousel data and functionality: https://github.com/alpinejs/alpine -->
                         <script>
                             document.addEventListener('alpine:init', () => {
                                 Alpine.data('carousel', () => ({
                                     active: 0,
                                     autorotate: true,
-                                    autorotateTiming: 7000,
+                                    autorotateTiming: 4000,
                                     items: [
                                         {
                                             img: './images/chris-gracias.jpg',
-                                            quote: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque quisquam corrupti, laborum sequi, cum dicta harum dolores sed temporibus architecto ipsa ullam pariatur ea, nulla vitae voluptatum? Ullam, et vitae.",
+                                            quote: "+91 97692 64131",
                                             name: 'Chris Gracias',
                                             role: 'General Secretary'
                                         },
                                         {
                                             img: './images/leroy-pereira.jpeg',
-                                            quote: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque quisquam corrupti, laborum sequi, cum dicta harum dolores sed temporibus architecto ipsa ullam pariatur ea, nulla vitae voluptatum? Ullam, et vitae.",
+                                            quote: "+91 70456 50317",                                          
                                             name: 'Leroy Pereira',
                                             role: 'Boys Sports Secretary'
                                         },
                                         {
                                             img: './images/eden-charles.jpg',
-                                            quote: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque quisquam corrupti, laborum sequi, cum dicta harum dolores sed temporibus architecto ipsa ullam pariatur ea, nulla vitae voluptatum? Ullam, et vitae.",
+                                            quote: "+91 70456 50317",
                                             name: 'Eden Charles',
                                             role: 'Girls Sports Secretary'
                                         },
@@ -778,59 +761,70 @@
                 </div>
             </section>
         </main>
-
-        <div class="isolate px-6 py-24 sm:py-32 lg:px-8">
-            <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
-                aria-hidden="true">
-                <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff9d80] to-[#fccb89] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
-                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-                </div>
+        <div class="isolate px-6 py-24 sm:py-32 lg:px-8 relative z-10">
+            <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
+                <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff9d80] to-[#ff6d80] opacity-40 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
             </div>
             <div class="mx-auto max-w-2xl text-center">
-                <h2 class="text-3xl font-bold tracking-tight text-white-900 sm:text-4xl">Contact Us</h2>
+                <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">Contact Us</h2>
             </div>
-            <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+            <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20 backdrop-blur-md bg-gray-800 bg-opacity-50 p-8 rounded-md">
                 <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                     <div>
-                        <label for="first-name" class="block text-sm font-semibold leading-6 text-white-900">First
-                            name</label>
+                        <label for="first-name" class="block text-sm font-semibold text-white-900">First Name</label>
                         <div class="mt-2.5">
-                            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                class="input-color block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-amber-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6">
+                            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="input-color block w-full rounded-md border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-amber-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-base">
                         </div>
                     </div>
                     <div>
-                        <label for="last-name" class="block text-sm font-semibold leading-6 text-white-900">Last
-                            name</label>
+                        <label for="last-name" class="block text-sm font-semibold text-white-900">Last Name</label>
                         <div class="mt-2.5">
-                            <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                                class="input-color block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-amber-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-600 sm:text-sm sm:leading-6">
+                            <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="input-color block w-full rounded-md border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-amber-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-600 sm:text-base">
                         </div>
                     </div>
                     <div class="sm:col-span-2">
-                        <label for="subject"
-                            class="block text-sm font-semibold leading-6 text-white-900">Subject</label>
+                        <label for="subject" class="block text-sm font-semibold text-white-900">Subject</label>
                         <div class="mt-2.5">
-                            <input type="text" name="subject" id="subject" autocomplete="organization"
-                                class="input-color block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-amber-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-600 sm:text-sm sm:leading-6">
+                            <input type="text" name="subject" id="subject" autocomplete="organization" class="input-color block w-full rounded-md border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-amber-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-600 sm:text-base">
                         </div>
                     </div>
                     <div class="sm:col-span-2">
-                        <label for="message"
-                            class="block text-sm font-semibold leading-6 text-white-900">Message</label>
+                        <label for="message" class="block text-sm font-semibold text-white-900">Message</label>
                         <div class="mt-2.5">
-                            <textarea name="message" id="message" rows="4"
-                                class="input-color block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-amber-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-600 sm:text-sm sm:leading-6"></textarea>
+                            <textarea name="message" id="message" rows="4" class="input-color block w-full rounded-md border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-amber-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-600 sm:text-base"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="mt-10">
-                    <button type="submit"
-                        class="block w-full rounded-md bg-amber-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Submit</button>
+                    <button type="submit" class="block w-full rounded-md bg-amber-600 px-4 py-3 text-center text-base font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 transition duration-300">Submit</button>
                 </div>
             </form>
         </div>
-    </div>
+             
+    </div>       
+
+    
+    <footer class="bg-black rounded-lg shadow-md m-4 dark:bg-gray-800 border-2 border-amber-800 focus:border-amber-800 focus:outline-none">
+        <div class="w-full mx-auto max-w-screen-xl p-4 flex flex-col md:flex-row md:items-center md:justify-center">
+            <span class="text-sm text-slate-400 sm:text-center dark:text-gray-400 mb-2 md:mb-0 md:mr-4">© 2023 <a href="https://flowbite.com/" class="hover:underline text-amber-500">Students' Council CRCE™</a>. All Rights Reserved.</span>
+    
+            <!-- Additional text with LinkedIn links and inline icons -->
+            <div class="text-white mt-2 md:mt-0 md:text-center flex items-center">
+    
+                <p class="text-sm mb-2">Designed with ❤️ by
+                    <span class="text-lg font-bold">
+                        <a href="https://www.linkedin.com/in/harshvishwakarma/" target="_blank" rel="noopener noreferrer" class="underline hover:text-orange-500 transition duration-300">Harsh Vishwakarma</a>
+                        <span class="mx-2">and</span>
+                        <a href="https://www.linkedin.com/in/joshua-dmello/" target="_blank" rel="noopener noreferrer" class="underline hover:text-orange-500 transition duration-300">Joshua Dmello</a>
+                    </span>
+                </p>
+    
+                
+            </div>
+        </div>
+    </footer>
+    
+        
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
