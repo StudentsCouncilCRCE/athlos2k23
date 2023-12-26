@@ -1,25 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=fallback');
 
-/* @import 'additional-styles/custom-fonts'; */
-
-/* ! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com */
-
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
-
 *,
 ::before,
 ::after {
   box-sizing: border-box;
-  /* 1 */
   border-width: 0;
-  /* 2 */
   border-style: solid;
-  /* 2 */
   border-color: #e5e7eb;
-  /* 2 */
 }
 
 ::before,
@@ -27,72 +14,37 @@
   --tw-content: '';
 }
 
-/*
-1. Use a consistent sensible line-height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-3. Use a more readable tab size.
-4. Use the user's configured `sans` font-family by default.
-5. Use the user's configured `sans` font-feature-settings by default.
-6. Use the user's configured `sans` font-variation-settings by default.
-*/
 
 html {
   line-height: 1.5;
-  /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
   -moz-tab-size: 4;
-  /* 3 */
   -o-tab-size: 4;
      tab-size: 4;
-  /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  /* 4 */
   font-feature-settings: normal;
-  /* 5 */
   font-variation-settings: normal;
-  /* 6 */
 }
 
-/*
-1. Remove the margin in all browsers.
-2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
-*/
 
 body {
   margin: 0;
-  /* 1 */
   line-height: inherit;
-  /* 2 */
 }
 
-/*
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-3. Ensure horizontal rules are visible by default.
-*/
 
 hr {
   height: 0;
-  /* 1 */
   color: inherit;
-  /* 2 */
   border-top-width: 1px;
-  /* 3 */
 }
 
-/*
-Add the correct text decoration in Chrome, Edge, and Safari.
-*/
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
 }
 
-/*
-Remove the default font size and weight for headings.
-*/
 
 h1,
 h2,
@@ -104,50 +56,32 @@ h6 {
   font-weight: inherit;
 }
 
-/*
-Reset links to optimize for opt-in styling instead of opt-out.
-*/
 
 a {
   color: inherit;
   text-decoration: inherit;
 }
 
-/*
-Add the correct font weight in Edge and Safari.
-*/
 
 b,
 strong {
   font-weight: bolder;
 }
 
-/*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
-*/
 
 code,
 kbd,
 samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  /* 1 */
   font-size: 1em;
-  /* 2 */
 }
 
-/*
-Add the correct font size in all browsers.
-*/
 
 small {
   font-size: 80%;
 }
 
-/*
-Prevent `sub` and `sup` elements from affecting the line height in all browsers.
-*/
 
 sub,
 sup {
@@ -165,26 +99,13 @@ sup {
   top: -0.5em;
 }
 
-/*
-1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
-3. Remove gaps between table borders by default.
-*/
 
 table {
   text-indent: 0;
-  /* 1 */
   border-color: inherit;
-  /* 2 */
   border-collapse: collapse;
-  /* 3 */
 }
 
-/*
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
-3. Remove default padding in all browsers.
-*/
 
 button,
 input,
@@ -192,123 +113,73 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
-  /* 1 */
   font-size: 100%;
-  /* 1 */
   font-weight: inherit;
-  /* 1 */
   line-height: inherit;
-  /* 1 */
   color: inherit;
-  /* 1 */
   margin: 0;
-  /* 2 */
   padding: 0;
-  /* 3 */
 }
 
-/*
-Remove the inheritance of text transform in Edge and Firefox.
-*/
 
 button,
 select {
   text-transform: none;
 }
 
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Remove default button styles.
-*/
 
 button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
   -webkit-appearance: button;
-  /* 1 */
   background-color: transparent;
-  /* 2 */
   background-image: none;
-  /* 2 */
 }
 
-/*
-Use the modern Firefox focus style for all focusable elements.
-*/
 
 :-moz-focusring {
   outline: auto;
 }
 
-/*
-Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
-*/
 
 :-moz-ui-invalid {
   box-shadow: none;
 }
 
-/*
-Add the correct vertical alignment in Chrome and Firefox.
-*/
 
 progress {
   vertical-align: baseline;
 }
 
-/*
-Correct the cursor style of increment and decrement buttons in Safari.
-*/
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
   height: auto;
 }
 
-/*
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
-*/
 
 [type='search'] {
   -webkit-appearance: textfield;
-  /* 1 */
   outline-offset: -2px;
-  /* 2 */
 }
 
-/*
-Remove the inner padding in Chrome and Safari on macOS.
-*/
 
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to `inherit` in Safari.
-*/
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  /* 1 */
   font: inherit;
-  /* 2 */
 }
 
-/*
-Add the correct display in Chrome and Safari.
-*/
 
 summary {
   display: list-item;
 }
 
-/*
-Removes the default spacing and border for appropriate elements.
-*/
 
 blockquote,
 dl,
@@ -343,56 +214,34 @@ menu {
   padding: 0;
 }
 
-/*
-Prevent resizing textareas horizontally by default.
-*/
 
 textarea {
   resize: vertical;
 }
 
-/*
-1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
-2. Set the default placeholder color to the user's configured gray 400 color.
-*/
 
 input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
-  /* 1 */
   color: #9ca3af;
-  /* 2 */
 }
 
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
-  /* 1 */
   color: #9ca3af;
-  /* 2 */
 }
 
-/*
-Set the default cursor for buttons.
-*/
 
 button,
 [role="button"] {
   cursor: pointer;
 }
 
-/*
-Make sure disabled buttons don't get the pointer cursor.
-*/
 
 :disabled {
   cursor: default;
 }
 
-/*
-1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
-2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
-   This can trigger a poorly considered lint error in some tools but is included by design.
-*/
 
 img,
 svg,
@@ -403,14 +252,9 @@ iframe,
 embed,
 object {
   display: block;
-  /* 1 */
   vertical-align: middle;
-  /* 2 */
 }
 
-/*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
 
 img,
 video {
@@ -418,7 +262,6 @@ video {
   height: auto;
 }
 
-/* Make elements with the HTML hidden attribute stay hidden by default */
 
 [hidden] {
   display: none;
@@ -444,7 +287,7 @@ video {
 [type='text']:focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
-  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-inset: var(--tw-empty,);
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: #2563eb;
@@ -531,7 +374,7 @@ select{
 [type='checkbox']:focus,[type='radio']:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
-  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-inset: var(--tw-empty,);
   --tw-ring-offset-width: 2px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: #2563eb;
@@ -744,7 +587,7 @@ select{
 .form-input:focus, .form-textarea:focus, .form-select:focus, .form-multiselect:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
-  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-inset: var(--tw-empty,);
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: #2563eb;
@@ -821,7 +664,7 @@ select{
 .form-checkbox:focus,.form-radio:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
-  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-inset: var(--tw-empty,);
   --tw-ring-offset-width: 2px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: #2563eb;
@@ -865,9 +708,7 @@ select{
   background-color: currentColor;
 }
 
-/* Additional styles */
 
-/* Typography */
 
 .h1{
   font-size: 2.75rem;
@@ -917,7 +758,6 @@ select{
   }
 }
 
-/* Buttons */
 
 .btn,
 .btn-sm{
@@ -951,7 +791,6 @@ select{
   padding-bottom: 0.25rem;
 }
 
-/* Forms */
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -1026,7 +865,6 @@ input[type="search"]::-webkit-search-results-decoration {
   color: rgb(147 51 234 / var(--tw-text-opacity));
 }
 
-/* Chrome, Safari and Opera */
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -1034,9 +872,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .no-scrollbar {
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
 }
 
 .form-input:focus,
@@ -1050,7 +886,6 @@ input[type="search"]::-webkit-search-results-decoration {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-/* Hamburger button */
 
 .hamburger svg>*:nth-child(1),
 .hamburger svg>*:nth-child(2),
@@ -1089,7 +924,6 @@ input[type="search"]::-webkit-search-results-decoration {
   transition: y 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.1s ease-out;
 }
 
-/* Custom Swiper styles */
 
 .swiper-button-disabled{
   pointer-events: none;
@@ -1105,7 +939,6 @@ input[type="search"]::-webkit-search-results-decoration {
   opacity: 1;
 }
 
-/* Pulsing animation */
 
 @keyframes pulseLoop {
   0% {
@@ -1144,7 +977,6 @@ input[type="search"]::-webkit-search-results-decoration {
   transform: translateZ(0);
 }
 
-/* Custom AOS distance */
 
 @media screen {
   html:not(.no-js) [data-aos=fade-up] {
@@ -2579,7 +2411,6 @@ input[type="search"]::-webkit-search-results-decoration {
           mask-image: radial-gradient(black, transparent 60%);
 }
 
-/* See Alpine.js: https://github.com/alpinejs/alpine#x-cloak */
 
 [x-cloak=""] {
   display: none;
@@ -3540,7 +3371,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 
-/* stuco edition */
 
 .h-69{
   height: 12rem;
