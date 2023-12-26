@@ -3552,7 +3552,7 @@ input[type="search"]::-webkit-search-results-decoration {
   outline: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .lg\:hidden {
       display: none !important;
   }
@@ -3569,6 +3569,8 @@ input[type="search"]::-webkit-search-results-decoration {
       top: 60px;
       left: 0;
       width: 100%;
+      
+    margin-top: 1.5rem;
   }
 
   #mobile-menu.hidden {
