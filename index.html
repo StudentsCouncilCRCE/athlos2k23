@@ -10,6 +10,8 @@
     <link href="./css/vendors/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" />
     <link href="./style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
@@ -20,6 +22,22 @@
     <div class="flex flex-col min-h-screen overflow-hidden">
 
         <!-- Site header -->
+        <style>
+            @media (max-width: 767px) {
+                nav ul {
+                    flex-direction: column; /* Change to column layout for mobile */
+                }
+                nav ul li {
+                    margin-top: 1.5em; /* Adjust the spacing between elements */
+                }
+                nav ul li::after {
+                    width: 0; /* Reset the underline for mobile */
+                }
+                nav ul li:hover::after {
+                    width: 0; /* Reset the underline for mobile */
+                }
+            }
+        </style>
         <header class="absolute w-full z-30">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 <div class="flex items-center justify-between h-16 md:h-20 pt-4">
@@ -108,10 +126,15 @@
                                 .btn:focus {
                                   box-shadow: 0 0 10px rgba(201, 81, 6, 0.7); /* Use a suitable color of your choice */
                                 }
+                                @media (max-width: 767px) {
+                                    .btn {
+                                        margin-top : 1em;
+                                    }
+                                }
                               </style>
                               
                               <a class="btn text-slate-900 bg-gradient-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group"
-                                href="#0">
+                                href="/images/Athlos-2024 (marketing)Brochure final.pdf" target="blank">
                                 Brochure <span
                                   class="tracking-normal text-amber-500 group-hover:translate-y-0.5 transition-transform duration-150 ease-in-out ml-1"><i
                                     class="ml-2 fa-solid fa-arrow-down" style="color: #C95106;"></i></span>
@@ -119,8 +142,6 @@
                           </div>
                         </ul>
                       </nav>
-                      
-
                 </div>
             </div>
         </header>
@@ -218,171 +239,132 @@
                                 Schedule</h2>
                         </div>
 
-                        <div
-                            class="relative before:absolute before:inset-0 before:-translate-x-full before:z-20 before:bg-gradient-to-l before:from-transparent before:to-amber-700 before:to-20% after:absolute after:inset-0 after:translate-x-full after:z-20 after:bg-gradient-to-r after:from-transparent after:to-amber-700 after:to-20%">
+                        <div class="relative before:absolute before:inset-0 before:-translate-x-full before:z-20 before:bg-gradient-to-l before:from-transparent before:to-amber-700 before:to-20% after:absolute after:inset-0 after:translate-x-full after:z-20 after:bg-gradient-to-r after:from-transparent after:to-amber-700 after:to-20%">
                             <div class="testimonials-carousel swiper-container group">
                                 <div class="swiper-wrapper w-fit" data-highlighter>
                                     <!-- Carousel items -->
                                     <div class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px overflow-hidden group transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
                                         <div class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden" style="transition: all 0.3s ease-in-out;">
                                             <!-- Particles animation -->
-                                            <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out"
-                                                aria-hidden="true">
+                                            <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out" aria-hidden="true">
                                                 <canvas data-particle-animation data-particle-quantity="3"></canvas>
                                             </div>
                                             <!-- Radial gradient -->
-                                            <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square"
-                                                aria-hidden="true">
-                                                <div
-                                                    class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]">
-                                                </div>
+                                            <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square" aria-hidden="true">
+                                                <div class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]"></div>
                                             </div>
                                             <div class="flex flex-col p-6 h-full">
-                                                <img class="mb-3" src="./images/table-tennis-paddle-ball-solid.svg" width="56"
-                                                    height="56" alt="Icon 01">
+                                                <img class="mb-3 slow-bounce" src="./images/ping-pong-svgrepo-com.svg" width="56" height="56" alt="Icon 01">
                                                 <div class="grow">
-                                                    <div class="font-bold text-lg mb-1">Table Tennis</div>
+                                                    <div class="font-bold text-lg mb-1 text-white">Table Tennis</div>
                                                     <div class="text-slate-400">17th January</div>
-                                                    <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West),
-                                                        Mumbai</div>
+                                                    <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West), Mumbai</div>
                                                 </div>
                                                 <div class="text-right">
-                                                    <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group"
-                                                        href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span
-                                                            class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+                                                    <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group" href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px overflow-hidden group transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
-                                        <div
-                                            class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
-                                            <!-- Particles animation -->
-                                            <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out"
-                                                aria-hidden="true">
-                                                <canvas data-particle-animation data-particle-quantity="3"></canvas>
-                                            </div>
-                                            <!-- Radial gradient -->
-                                            <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square"
-                                                aria-hidden="true">
-                                                <div
-                                                    class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]">
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col p-6 h-full">
-                                                <img class="mb-3" src="./images/carousel-icon-01.svg" width="56"
-                                                    height="56" alt="Icon 01">
-                                                <div class="grow">
-                                                    <div class="font-bold text-lg mb-1">Chess</div>
-                                                    <div class="text-slate-400">17th January</div>
-                                                    <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West),
-                                                        Mumbai</div>
-                                                </div>
-                                                <div class="text-right">
-                                                    <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group"
-                                                        href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span
-                                                            class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px overflow-hidden group transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
-                                        <div
-                                            class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
-                                            <!-- Particles animation -->
-                                            <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out"
-                                                aria-hidden="true">
-                                                <canvas data-particle-animation data-particle-quantity="3"></canvas>
-                                            </div>
-                                            <!-- Radial gradient -->
-                                            <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square"
-                                                aria-hidden="true">
-                                                <div
-                                                    class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]">
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col p-6 h-full">
-                                                <img class="mb-3" src="./images/carrom.svg" width="56"
-                                                    height="56" alt="Icon 01">
-                                                <div class="grow">
-                                                    <div class="font-bold text-lg mb-1">Carrom</div>
-                                                    <div class="text-slate-400">18th January</div>
-                                                    <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West),
-                                                        Mumbai</div>
-                                                </div>
-                                                <div class="text-right">
-                                                    <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group"
-                                                        href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span
-                                                            class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px overflow-hidden group transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
-                                        <div
-                                            class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
-                                            <!-- Particles animation -->
-                                            <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out"
-                                                aria-hidden="true">
-                                                <canvas data-particle-animation data-particle-quantity="3"></canvas>
-                                            </div>
-                                            <!-- Radial gradient -->
-                                            <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square"
-                                                aria-hidden="true">
-                                                <div
-                                                    class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]">
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col p-6 h-full">
-                                                <img class="mb-3" src="./images/carousel-icon-01.svg" width="56"
-                                                    height="56" alt="Icon 01">
-                                                <div class="grow">
-                                                    <div class="font-bold text-lg mb-1">Box Cricket</div>
-                                                    <div class="text-slate-400">19-20th January</div>
-                                                    <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West),
-                                                        Mumbai</div>
-                                                </div>
-                                                <div class="text-right">
-                                                    <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group"
-                                                        href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span
-                                                            class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
-                                    <div class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px overflow-hidden group transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
-                                        <div
-                                            class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
-                                            <!-- Particles animation -->
-                                            <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out"
-                                                aria-hidden="true">
-                                                <canvas data-particle-animation data-particle-quantity="3"></canvas>
-                                            </div>
-                                            <!-- Radial gradient -->
-                                            <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square"
-                                                aria-hidden="true">
-                                                <div
-                                                    class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]">
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col p-6 h-full">
-                                                <img class="mb-3" src="./images/carousel-icon-01.svg" width="56"
-                                                    height="56" alt="Icon 01">
-                                                <div class="grow">
-                                                    <div class="font-bold text-lg mb-1">Rink Football</div>
-                                                    <div class="text-slate-400">21st January</div>
-                                                    <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West),
-                                                        Mumbai</div>
-                                                </div>
-                                                <div class="text-right">
-                                                    <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group"
-                                                        href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span
-                                                            class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <!-- Second slide -->
+<div class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px overflow-hidden group transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
+    <div class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
+        <!-- Particles animation -->
+        <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out" aria-hidden="true">
+            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+        </div>
+        <!-- Radial gradient -->
+        <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square">
+            <div class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]"></div>
+        </div>
+        <div class="flex flex-col p-6 h-full">
+            <img class="mb-3 slow-bounce" src="./images/chess-svgrepo-com.svg" width="56" height="56" alt="Icon 02">
+            <div class="grow">
+                <div class="font-bold text-lg mb-1 text-white">Chess</div>
+                <div class="text-slate-400">17th January</div>
+                <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West), Mumbai</div>
+            </div>
+            <div class="text-right">
+                <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group" href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Third slide -->
+<div class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px overflow-hidden group transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
+    <div class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
+        <!-- Particles animation -->
+        <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out" aria-hidden="true">
+            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+        </div>
+        <!-- Radial gradient -->
+        <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square">
+            <div class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]"></div>
+        </div>
+        <div class="flex flex-col p-6 h-full">
+            <img class="mb-3 slow-bounce" src="./images/carrom.svg" width="56" height="56" alt="Icon 03">
+            <div class="grow">
+                <div class="font-bold text-lg mb-1 text-white">Carrom</div>
+                <div class="text-slate-400">18th January</div>
+                <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West), Mumbai</div>
+            </div>
+            <div class="text-right">
+                <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group" href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fourth slide -->
+<div class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px overflow-hidden group transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
+    <div class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
+        <!-- Particles animation -->
+        <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out" aria-hidden="true">
+            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+        </div>
+        <!-- Radial gradient -->
+        <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square">
+            <div class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]"></div>
+        </div>
+        <div class="flex flex-col p-6 h-full">
+            <img class="mb-3 slow-bounce" src="./images/cricket-game-svgrepo-com.svg" width="56" height="56" alt="Icon 04">
+            <div class="grow">
+                <div class="font-bold text-lg mb-1 text-white">Box Cricket</div>
+                <div class="text-slate-400">19th-20th January</div>
+                <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West), Mumbai</div>
+            </div>
+            <div class="text-right">
+                <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group" href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+                                 
+<!-- Fifth slide -->
+<div class="swiper-slide h-auto relative bg-amber-800 rounded-3xl p-px overflow-hidden group transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
+    <div class="relative h-full bg-black rounded-[inherit] z-20 overflow-hidden">
+        <!-- Particles animation -->
+        <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out" aria-hidden="true">
+            <canvas data-particle-animation data-particle-quantity="3"></canvas>
+        </div>
+        <!-- Radial gradient -->
+        <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square">
+            <div class="absolute inset-0 translate-z-0 rounded-full bg-amber-800 group-[.swiper-slide-active]/slide:bg-orange-500 transition-colors duration-500 ease-in-out blur-[60px]"></div>
+        </div>
+        <div class="flex flex-col p-6 h-full">
+            <img class="mb-3 slow-bounce" src="./images/football-player-spain-svgrepo-com.svg" width="56" height="56" alt="Icon 05">
+            <div class="grow">
+                <div class="font-bold text-lg mb-1 text-white">Rink Football</div>
+                <div class="text-slate-400">21st January</div>
+                <div class="text-slate-500 mb-3">Venue: FR.CRCE, Bandra (West), Mumbai</div>
+            </div>
+            <div class="text-right">
+                <a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group" href="https://goo.gl/maps/jPwn2VoMcaSgHPAJ7">Location <span class="tracking-normal text-orange-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+            </div>
+        </div>
+    </div>
+</div>
                                 </div>
                             </div>
                         </div>
@@ -470,7 +452,7 @@
                                             <!-- Registration Button -->
                                             <button onclick="window.location.href='registration-page.html'" class="inline-block px-6 py-3 text-lg border border-white rounded-full transition-all duration-300 hover:bg-transparent hover:border-transparent hover:bg-gradient-to-r hover:from-slate-200/50 hover:via-slate-200/50 hover:to-slate-200/50 focus:outline-none focus:shadow-outline relative overflow-hidden">
                                                 <span class="flex items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mr-2 animate-bounce">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mr-2 slow-bounce">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                                     </svg>
                                                     Register Now
@@ -500,7 +482,7 @@
                                             <!-- Registration Button -->
                                             <button onclick="window.location.href='registration-page.html'" class="inline-block px-6 py-3 text-lg border border-white rounded-full transition-all duration-300 hover:bg-transparent hover:border-transparent hover:bg-gradient-to-r hover:from-slate-200/50 hover:via-slate-200/50 hover:to-slate-200/50 focus:outline-none focus:shadow-outline relative overflow-hidden">
                                                 <span class="flex items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mr-2 animate-bounce">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mr-2 slow-bounce">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                                     </svg>
                                                     Register Now
@@ -525,7 +507,7 @@
                                             </div>
                                             <button onclick="window.location.href='registration-page.html'" class="inline-block px-6 py-3 text-lg border border-white rounded-full transition-all duration-300 hover:bg-transparent hover:border-transparent hover:bg-gradient-to-r hover:from-slate-200/50 hover:via-slate-200/50 hover:to-slate-200/50 focus:outline-none focus:shadow-outline relative overflow-hidden">
                                                 <span class="flex items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mr-2 animate-bounce">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mr-2 slow-bounce">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                                     </svg>
                                                     Register Now
@@ -549,7 +531,7 @@
                                             </div>
                                             <button onclick="window.location.href='registration-page.html'" class="inline-block px-6 py-3 text-lg border border-white rounded-full transition-all duration-300 hover:bg-transparent hover:border-transparent hover:bg-gradient-to-r hover:from-slate-200/50 hover:via-slate-200/50 hover:to-slate-200/50 focus:outline-none focus:shadow-outline relative overflow-hidden">
                                                 <span class="flex items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mr-2 animate-bounce">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mr-2 slow-bounce">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                                     </svg>
                                                     Register Now
@@ -573,7 +555,7 @@
                                             </div>
                                             <button onclick="window.location.href='registration-page.html'" class="inline-block px-6 py-3 text-lg border border-white rounded-full transition-all duration-300 hover:bg-transparent hover:border-transparent hover:bg-gradient-to-r hover:from-slate-200/50 hover:via-slate-200/50 hover:to-slate-200/50 focus:outline-none focus:shadow-outline relative overflow-hidden">
                                                 <span class="flex items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mr-2 animate-bounce">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mr-2 slow-bounce">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                                     </svg>
                                                     Register Now
@@ -710,6 +692,41 @@
                 </div>
             </section>
         </main>
+
+        <section>  
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Accordion Item #1
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Accordion Item #2
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Accordion Item #3
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+              </div>  
+            </section>
         
         <div class="isolate px-6 py-24 sm:py-32 lg:px-8 relative z-10">
             <div id="particles-js" class="absolute inset-0"></div>
@@ -752,27 +769,31 @@
             </form>
         </div>
     </div>       
+    <style>
+        /* Adjust the margin of the footer */
+        .footer-margin-adjusted {
+          margin-bottom: 0 !important;
 
-    
-    <footer class="bg-black rounded-lg shadow-md m-4 dark:bg-gray-800 border-2 border-amber-800 focus:border-amber-800 focus:outline-none">
-        <div class="w-full mx-auto max-w-screen-xl p-4 flex flex-col md:flex-row md:items-center md:justify-center">
-    
-            <!-- Copyright text -->
-            <span class="text-sm text-slate-400 sm:text-center dark:text-gray-400 mb-2 md:mb-0 md:mr-4 md:text-base lg:text-lg xl:text-xl">© 2023 <a href="https://flowbite.com/" class="hover:underline text-amber-500">Students' Council CRCE™</a>. All Rights Reserved.</span>
-    
-            <!-- Additional text with LinkedIn links and inline icons -->
-            <div class="text-white mt-2 md:mt-0 md:text-center flex items-center">
-    
-                <p class="text-sm mb-2 md:mb-0 md:text-base lg:text-lg xl:text-xl">Designed by
-                    <span class="text-lg font-bold">
-                        <a href="https://www.linkedin.com/in/harshvishwakarma/" target="_blank" rel="noopener noreferrer" class="underline hover:text-orange-500 transition duration-300">Harsh Vishwakarma</a>
-                        <span class="mx-2">and</span>
-                        <a href="https://www.linkedin.com/in/joshua-dmello/" target="_blank" rel="noopener noreferrer" class="underline hover:text-orange-500 transition duration-300">Joshua Dmello</a>
-                    </span>
-                </p>
+        }
+      </style>
+    <footer class="bg-black rounded-lg shadow-md w-full dark:bg-gray-800 border-2 border-amber-800 focus:border-amber-800 focus:outline-none footer-margin-adjusted">
+    <div class="w-full mx-auto max-w-screen-xl p-4 flex flex-col md:flex-row md:items-center md:justify-center">
+                <!-- Copyright text -->
+                <span class="text-sm text-slate-400 sm:text-center dark:text-gray-400 mb-2 md:mb-0 md:mr-4 md:text-base lg:text-lg xl:text-xl">© 2023 <a href="https://flowbite.com/" class="hover:underline text-amber-500">Students' Council CRCE™</a>. All Rights Reserved.</span>
+        
+                <!-- Additional text with LinkedIn links and inline icons -->
+                <div class="text-white mt-2 md:mt-0 md:text-center flex items-center">
+        
+                    <p class="text-sm mb-2 md:mb-0 md:text-base lg:text-lg xl:text-xl">Designed by
+                        <span class="text-lg font-bold">
+                            <a href="https://www.linkedin.com/in/harshvishwakarma/" target="_blank" rel="noopener noreferrer" class="underline hover:text-orange-500 transition duration-300">Harsh Vishwakarma</a>
+                            <span class="mx-2">and</span>
+                            <a href="https://www.linkedin.com/in/joshua-dmello/" target="_blank" rel="noopener noreferrer" class="underline hover:text-orange-500 transition duration-300">Joshua Dmello</a>
+                        </span>
+                    </p>
+                </div>
             </div>
-        </div>
-    </footer>    
+        </footer>   
     <script>
         particlesJS('particles-js', {
             particles: {
@@ -877,20 +898,10 @@
             },
             retina_detect: true
         });
-    </script>      
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Ensure the mobile menu is hidden by default
-            mobileMenu.classList.add('hidden');
-        });
     </script>
+    <!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://kit.fontawesome.com/fc3bce034a.js" crossorigin="anonymous"></script>
     <script src="./js/vendors/alpinejs.min.js" defer></script>
