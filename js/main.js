@@ -134,7 +134,7 @@ class ParticleAnimation {
     const { x, y, translateX, translateY, size, alpha } = circle;
   
     const footballImage = new Image();
-    footballImage.src = '/images/football.png';
+    footballImage.src = '/images/footballw.png';
   
     this.context.translate(translateX, translateY);
     this.context.globalAlpha = alpha;

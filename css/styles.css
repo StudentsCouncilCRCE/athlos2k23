@@ -3460,3 +3460,16 @@ input[type="search"]::-webkit-search-results-decoration {
 .btnn:hover::before {
   width: 100%;
 }
+
+.hero-img{
+  background-image: url(../images/pc.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: -999 !important;
+}
+
+@media (max-width: 750px) {
+  .hero-img{
+    background-image: url(../images/phone.jpg);
+  }
+}
