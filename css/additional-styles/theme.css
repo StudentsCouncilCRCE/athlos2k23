@@ -7,7 +7,6 @@
     @apply ring-0;
 }
 
-/* Hamburger button */
 .hamburger svg>*:nth-child(1),
 .hamburger svg>*:nth-child(2),
 .hamburger svg>*:nth-child(3) {
@@ -45,7 +44,6 @@
     transition: y 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.1s ease-out;
 }
 
-/* Custom Swiper styles */
 .swiper-button-disabled {
     @apply opacity-50 cursor-default pointer-events-none;
 }
@@ -58,7 +56,6 @@
     @apply opacity-100;
 }
 
-/* Pulsing animation */
 @keyframes pulseLoop {
     0% {
         opacity: 0;
@@ -96,7 +93,6 @@
     transform: translateZ(0);
 }
 
-/* Custom AOS distance */
 @media screen {
     html:not(.no-js) [data-aos=fade-up] {
         -webkit-transform: translate3d(0, 14px, 0);

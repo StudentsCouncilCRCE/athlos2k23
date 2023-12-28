@@ -48,7 +48,6 @@ if (carouselEl.length > 0) {
   });
 }
 
-// Particle animation
 class ParticleAnimation {
   constructor(el, { quantity = 180, staticity = 5, ease = 2   } = {}) {
     this.canvas = el;
@@ -130,23 +129,10 @@ class ParticleAnimation {
     return { x, y, translateX, translateY, size, alpha, targetAlpha, dx, dy, magnetism };
   }
 
-  // drawCircle(circle, update = false) {
-  //   const { x, y, translateX, translateY, size, alpha } = circle;
-  //   this.context.translate(translateX, translateY);
-  //   this.context.beginPath();
-  //   this.context.arc(x, y, size, 0, 2 * Math.PI);
-  //   this.context.fillStyle = `rgba(255, 255, 255, ${alpha})`;
-  //   this.context.fill();
-  //   this.context.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-  //   if (!update) {
-  //     this.circles.push(circle);
-  //   }
-  // }
 
   drawCircle(circle, update = false) {
     const { x, y, translateX, translateY, size, alpha } = circle;
   
-    // Load football image
     const footballImage = new Image();
     footballImage.src = '/images/football.png';
   
@@ -173,7 +159,6 @@ class ParticleAnimation {
     }
   }
 
-  // This function remaps a value from one range to another range
   remapValue(value, start1, end1, start2, end2) {
     const remapped = (value - start1) * (end2 - start2) / (end1 - start1) + start2;
     return remapped > 0 ? remapped : 0;
@@ -182,12 +167,11 @@ class ParticleAnimation {
   animate() {
     this.clearContext();
     this.circles.forEach((circle, i) => {
-      // Handle the alpha value
       const edge = [
-        circle.x + circle.translateX - circle.size, // distance from left edge
-        this.canvasSize.w - circle.x - circle.translateX - circle.size, // distance from right edge
-        circle.y + circle.translateY - circle.size, // distance from top edge
-        this.canvasSize.h - circle.y - circle.translateY - circle.size, // distance from bottom edge
+        circle.x + circle.translateX - circle.size,
+        this.canvasSize.w - circle.x - circle.translateX - circle.size,
+        circle.y + circle.translateY - circle.size,
+        this.canvasSize.h - circle.y - circle.translateY - circle.size,
       ];
       const closestEdge = edge.reduce((a, b) => Math.min(a, b));
       const remapClosestEdge = this.remapValue(closestEdge, 0, 20, 0, 1).toFixed(2);
@@ -201,14 +185,10 @@ class ParticleAnimation {
       circle.y += circle.dy;
       circle.translateX += ((this.mouse.x / (this.settings.staticity / circle.magnetism)) - circle.translateX) / this.settings.ease;
       circle.translateY += ((this.mouse.y / (this.settings.staticity / circle.magnetism)) - circle.translateY) / this.settings.ease;
-      // circle gets out of the canvas
       if (circle.x < -circle.size || circle.x > this.canvasSize.w + circle.size || circle.y < -circle.size || circle.y > this.canvasSize.h + circle.size) {
-        // remove the circle from the array
         this.circles.splice(i, 1);
-        // create a new circle
         const circle = this.circleParams();
         this.drawCircle(circle);
-        // update the circle position
       } else {
         this.drawCircle({ ...circle, x: circle.x, y: circle.y, translateX: circle.translateX, translateY: circle.translateY, alpha: circle.alpha }, true);
       }
@@ -217,7 +197,6 @@ class ParticleAnimation {
   }
 }
 
-// Init ParticleAnimation
 const canvasElements = document.querySelectorAll('[data-particle-animation]');
 canvasElements.forEach(canvas => {
   const options = {
@@ -229,7 +208,6 @@ canvasElements.forEach(canvas => {
 });
 
 
-// Box highlighter
 class Highlighter {
   constructor(containerElement) {
     this.container = containerElement;
@@ -278,7 +256,6 @@ class Highlighter {
   }  
 }
 
-// Init Highlighter
 const highlighters = document.querySelectorAll('[data-highlighter]');
 highlighters.forEach((highlighter) => {
   new Highlighter(highlighter);
