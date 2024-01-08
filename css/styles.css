@@ -3473,21 +3473,3 @@ input[type="search"]::-webkit-search-results-decoration {
     background-image: url(../images/phone.jpg);
   }
 }
-
-#preloader {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  z-index: 999;
-  background: url(./vendors/a.gif) no-repeat center center;
-  background-size: cover; /* Ensure it covers the entire element */
-  top: 0;
-  left: 0;
-}
-
-@media only screen and (max-width: 767px) {
-  #preloader {
-    background: url(./vendors/b.gif) no-repeat center center;
-    background-size: cover; /* Consistent with the larger screen */
-  }
-}
